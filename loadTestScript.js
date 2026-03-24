@@ -8,9 +8,9 @@ export let options = {
 
 export function setup() {
   var url = "https://thinking-tester-contact-list.herokuapp.com/users/login"
-  var payload = JSON.stringify({ "email": "test@fake.com", "password": "foobarfoo" })
+  var payload = JSON.stringify({ "email": "testbook@fake.com", "password": "foobarfoo" })
   var params =  { headers: { "Content-Type": "application/json" } }
-  let response = http.post(url, payload, params);
+  let response = http.post(url, payload, params)
   let JSONResponse = JSON.parse(response.body)
   let token = JSONResponse.token
   return token
